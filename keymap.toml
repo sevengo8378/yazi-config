@@ -4,25 +4,32 @@
 
 [mgr]
 
-[[manager.prepend_keymap]]
-on = "H"
+# duckdb
+[[mgr.prepend_keymap]]
+on = "<C-h>"
 run = "plugin duckdb -1"
 desc = "Scroll one column to the left"
 
-[[manager.prepend_keymap]]
-on = "L"
+[[mgr.prepend_keymap]]
+on = "<C-l>"
 run = "plugin duckdb +1"
 desc = "Scroll one column to the right"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "o" ]
 run = "plugin duckdb -open"
 desc = "open with duckdb"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "u" ]
 run = "plugin duckdb -ui"
 desc = "open with duckdb ui"
+
+# toggle-pane https://github.com/yazi-rs/plugins/tree/main/toggle-pane.yazi
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = "plugin toggle-pane max-preview"
+desc = "Maximize or restore the preview pane"
 
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
