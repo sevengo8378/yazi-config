@@ -1,0 +1,19 @@
+[[plugin.deps]]
+use = "wylie102/duckdb"
+rev = "3f8c863"
+hash = "87b9233a74325e95011670ed20bbd0d4"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:tokyo-night"
+rev = "9511cb0"
+hash = "99aa06d3014798d86001c324468d497f"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "9511cb0"
+hash = "7dfe41c9c3d9be76da8a844263d0bbed"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:dracula"
+rev = "9511cb0"
+hash = "20624fcdfcf7e4e912de05e348065e5e"
