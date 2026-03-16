@@ -62,11 +62,19 @@ download = [
 	{ run = "ya emit download --open %S", desc = "Download and open" },
 	{ run = "ya emit download %S",        desc = "Download" },
 ]
+chrome = [
+	{ run = "open -a 'Google Chrome' %s1", desc = "Open in Chrome", for = "macos" },
+	{ run = "google-chrome %s1",          desc = "Open in Chrome", for = "linux", orphan = true },
+	{ run = "& 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' %s1", desc = "Open in Chrome", for = "windows", orphan = true },
+]
 
 [open]
 rules = [
 	# Folder
 	{ url = "*/", use = [ "edit", "open", "reveal" ] },
+	# HTML
+	{ mime = "text/html", use = [ "edit", "chrome", "reveal" ] },
+	{ url = "*.htm{,l}", use = [ "edit", "chrome", "reveal" ] },
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
