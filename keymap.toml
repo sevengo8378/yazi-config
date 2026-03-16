@@ -31,6 +31,16 @@ on   = "T"
 run  = "plugin toggle-pane max-preview"
 desc = "Maximize or restore the preview pane"
 
+# copy path
+[[mgr.prepend_keymap]]
+on = ["y","p"]
+run = "copy path"
+desc = "Copy the absolute path"
+[[mgr.prepend_keymap]]
+on = ["y","d"]
+run = "copy dirname"
+desc = "Copy the path of the parent directory"
+
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
 	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
